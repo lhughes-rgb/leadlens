@@ -1,0 +1,28 @@
+{
+  "build": {
+    "builder": "NIXPACKS"
+  },
+  "deploy": {
+    "startCommand": "node server.js",
+    "restartPolicyType": "ON_FAILURE"
+  }
+}
+```
+
+5. Click **"Commit changes"**
+
+---
+
+## Then set the PORT variable in Railway
+
+1. Go back to Railway → click your **leadlens** service
+2. Click **"Variables"** at the top
+3. Click **"Add Variable"**
+4. Set:
+   - Name: `PORT`
+   - Value: `3000`
+5. Click **Add**
+
+Railway will automatically redeploy. Watch the **Logs** tab — this time you should see:
+```
+🔍 LeadLens → http://localhost:3000
